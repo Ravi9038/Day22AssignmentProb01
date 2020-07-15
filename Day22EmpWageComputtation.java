@@ -21,5 +21,5 @@ public class Day22EmpWageComputtation{
 		}
 		empWage = empHrs * empRatePerHr;
 		System.out.println("Emp Wage "+ empWage);
-	}	
+	}
 }
