@@ -2,38 +2,47 @@
 
 public class Day22EmpWageComputtation{
 
-	public static final int isPartTime = 1;
-	public static final int isFullTime = 2;
-	public static final int empRatePerHr=20;
-	public static final int numOfWorkingDays=20;
+	public static final int isFullTime = 1;
+	public static final int isPartTime = 2;
 
-	public static void main(String [] args){
+	public void computeWage(String cmpName, int empRatePerHr, int numOfWorkingDays, int maxHrsInMonth){
 
 		int empHrs = 0;
-		int empWage = 0;
-		int totalEmpWage = 0;
+		int totalEmpHrs = 0;
+		int totalWorkingDays = 0;
 
-		for (int day=1; day<=numOfWorkingDays; day++){
+		while (totalEmpHrs <= maxHrsInMonth && totalWorkingDays < numOfWorkingDays){
 
-			int empCheck = (int) Math.floor(Math.random()*10) % 3;
+			totalWorkingDays++;
 
-			switch(empCheck){
+			int empCheck = (int) Math.floor(Math.random()*10%3);
 
-				case isPartTime :
-					empHrs = 4;
-					break;
+			switch (empCheck){
+
 				case isFullTime :
 					empHrs = 8;
 					break;
 
-				default :
+				case isPartTime :
+					empHrs = 4;
+					break;
+
+				default:
 					empHrs = 0;
 			}
-			empWage += empHrs * empRatePerHr;
-			totalEmpWage += empWage;
-			System.out.println("Emp Wage : "+empWage);
-		}
+			totalEmpHrs += empHrs;
+			System.out.println("Day : "+totalWorkingDays + " Emp Hr : "+empHrs);
 
-		System.out.println("Total Emp Wage "+ totalEmpWage);
+		}
+		int totalEmpWage = totalEmpHrs * empRatePerHr;
+		System.out.println("Toatal Emp Wage for company : "+cmpName + " is : "+totalEmpWage);
 	}
+	public static void main(String [] args){
+
+		UC8EmpWageCompany uc8 = new UC8EmpWageCompany();
+		uc8.computeWage("D-mart",20,2,10);
+		uc8.computeWage("Relince",10,4,20);
+
+	}
+
 }
