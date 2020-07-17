@@ -2,13 +2,15 @@
 class UC7Refactor{
 
 
-	public static final int isPartTime = 1;
-	public static final int isFullTime = 2;
-	public static final int empRatePerHr=20;
-	public static final int numOfWorkingDays=3;
-	public static final int maxHrsInMonth=10;
+	public static final int isFullTime = 1;
+	public static final int isPartTime = 2;
+	public static final int empRatePerHr = 20;
+	public static final int numOfWorkingDays = 2;
+	public static final int maxHrsInMonth = 10;
 
-		int empHrs = 0;
+	public void computeWage(){
+
+		int  empHrs = 0;
 		int totalEmpHrs = 0;
 		int totalWorkingDays = 0;
 
@@ -49,4 +51,4 @@ class UC7Refactor{
 		u7.computeWage();
 
 	}
-}	
+}
