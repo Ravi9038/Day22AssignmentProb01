@@ -1,6 +1,5 @@
 
-class UC7Refactor{
-
+class Day22EmpWageComputtation{
 
 	public static final int isFullTime = 1;
 	public static final int isPartTime = 2;
@@ -47,7 +46,7 @@ class UC7Refactor{
 	public static void main(String [] args){
 
 
-		UC7Refactor u7 = new UC7Refactor();
+		Day22EmpWageComputtation u7 = new Day22EmpWageComputtation();
 		u7.computeWage();
 
 	}
