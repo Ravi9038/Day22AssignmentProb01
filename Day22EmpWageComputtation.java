@@ -1,5 +1,5 @@
 
-class UC8EmpWageCompany{
+class Day22EmpWageComputtation{
 
 	public static final int isFullTime = 1;
 	public static final int isPartTime = 2;
@@ -38,7 +38,7 @@ class UC8EmpWageCompany{
 	}
 	public static void main(String [] args){
 
-		UC8EmpWageCompany uc8 = new UC8EmpWageCompany();
+		Day22EmpWageComputtation uc8 = new Day22EmpWageComputtation();
 		uc8.computeWage("D-mart",20,2,10);
 		uc8.computeWage("Relince",10,4,20);
 
